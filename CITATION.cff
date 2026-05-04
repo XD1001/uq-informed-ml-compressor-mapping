@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated Applied Thermal Engineering article."
+title: "Uncertainty Quantification-Informed Machine Learning Models For Compressor Performance Mapping"
+authors:
+  - family-names: Ding
+    given-names: Xin
+  - family-names: Ziviani
+    given-names: Davide
+version: 1.0.0
+date-released: 2026-05-04
+repository-code: "https://github.com/REPLACE-WITH-OWNER/uq-informed-ml-compressor-mapping"
+preferred-citation:
+  type: article
+  title: "Uncertainty Quantification-Informed Machine Learning Models For Compressor Performance Mapping"
+  authors:
+    - family-names: Ding
+      given-names: Xin
+    - family-names: Ziviani
+      given-names: Davide
+  journal: "Applied Thermal Engineering"
+  year: 2026
+  status: "accepted"

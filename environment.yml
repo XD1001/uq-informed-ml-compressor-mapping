@@ -1,0 +1,15 @@
+name: uq-compressor-mapping
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.12
+  - numpy=2.0.0
+  - pandas=2.3.2
+  - matplotlib=3.10.5
+  - scikit-learn=1.7.1
+  - pytorch=2.6.0
+  - joblib=1.5.1
+  - pip
+  - pip:
+      - pyro-ppl==1.9.1
