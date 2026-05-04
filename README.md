@@ -11,8 +11,10 @@ The repository provides representative Python implementations and assembled CSV 
 - `data/`: cleaned CSV exports for the three manuscript case studies.
 - `models/`: source-code modules for Gaussian Process Regression (GPR), Deep Ensembles (DE), and Bayesian Neural Networks (BNN).
 - `examples/`: lightweight example scripts that run the model workflows on the packaged datasets.
-- `requirements.txt`: Python package dependencies.
-- `environment.yml`: Conda environment specification.
+- `pyproject.toml`: primary Python dependency specification for `uv`.
+- `uv.lock`: locked `uv` dependency resolution for reproducible setup.
+- `requirements.txt`: pip-compatible dependency list.
+- `environment.yml`: Conda environment specification for users who prefer Conda.
 
 Generated cache files, trained pickle artifacts, and intermediate model outputs are intentionally excluded from the repository. Running the examples may create an `artifacts/` folder locally; this folder is ignored by Git.
 
@@ -26,33 +28,40 @@ The assembled datasets were compiled from previously published and publicly acce
 
 ## Quick Start
 
-Create an environment:
+The recommended setup uses [`uv`](https://docs.astral.sh/uv/):
+
+```bash
+uv sync
+```
+
+Run an example from the repository root:
+
+```bash
+uv run python examples/example_gpr.py --case case_2_scroll
+uv run python examples/example_de.py --case case_2_scroll
+uv run python examples/example_bnn.py --case case_2_scroll
+```
+
+Other supported cases are:
+
+```bash
+uv run python examples/example_gpr.py --case case_1_rotary
+uv run python examples/example_de.py --case case_3_vi
+uv run python examples/example_bnn.py --case case_3_vi
+```
+
+Conda remains supported as an alternative:
 
 ```bash
 conda env create -f environment.yml
 conda activate uq-compressor-mapping
 ```
 
-Alternatively, install with pip:
+Pip can also be used directly:
 
 ```bash
 python -m pip install -r requirements.txt
-```
-
-Run an example from the repository root:
-
-```bash
 python examples/example_gpr.py --case case_2_scroll
-python examples/example_de.py --case case_2_scroll
-python examples/example_bnn.py --case case_2_scroll
-```
-
-Other supported cases are:
-
-```bash
-python examples/example_gpr.py --case case_1_rotary
-python examples/example_de.py --case case_3_vi
-python examples/example_bnn.py --case case_3_vi
 ```
 
 The example settings are intentionally lighter than the full manuscript runs so that users can inspect the workflow quickly.
@@ -60,9 +69,14 @@ The example settings are intentionally lighter than the full manuscript runs so 
 ## Reproducibility Notes
 
 - The manuscript used Python 3.12 and the package versions listed in `requirements.txt`.
+- `uv.lock` captures the dependency resolution used for the `uv` workflow.
 - Some model-training routines use random splits, stochastic optimization, or sampling-based inference, so exact numerical values may vary slightly between runs.
 - The examples write generated outputs under `artifacts/`; these files are not required as input and are not tracked.
 - No `.pyc`, `__pycache__`, or trained `.pkl` files are part of the public source package.
+
+## Release
+
+The accepted-paper repository snapshot is versioned as `v1.0.0`.
 
 ## License
 

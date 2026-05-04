@@ -1,0 +1,26 @@
+[project]
+name = "uq-informed-ml-compressor-mapping"
+version = "1.0.0"
+description = "Reproducibility materials for uncertainty-quantification-informed machine-learning compressor mapping."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { file = "LICENSE.md" }
+authors = [
+    { name = "Xin Ding" },
+    { name = "Davide Ziviani" },
+]
+dependencies = [
+    "numpy==2.0.0",
+    "pandas==2.3.2",
+    "matplotlib==3.10.5",
+    "scikit-learn==1.7.1",
+    "torch==2.6.0",
+    "pyro-ppl==1.9.1",
+    "joblib==1.5.1",
+]
+
+[project.urls]
+Repository = "https://github.com/XD1001/uq-informed-ml-compressor-mapping"
+
+[tool.uv]
+package = false
