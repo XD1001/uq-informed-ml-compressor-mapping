@@ -8,7 +8,7 @@ authors:
     given-names: Davide
 version: 1.0.0
 date-released: 2026-05-04
-repository-code: "https://github.com/REPLACE-WITH-OWNER/uq-informed-ml-compressor-mapping"
+repository-code: "https://github.com/XD1001/uq-informed-ml-compressor-mapping"
 preferred-citation:
   type: article
   title: "Uncertainty Quantification-Informed Machine Learning Models For Compressor Performance Mapping"
