@@ -66,7 +66,12 @@ The example settings are intentionally lighter than the full manuscript runs so 
 
 ## License
 
-The final reuse license is pending author/institution confirmation. See `LICENSE.md`.
+This repository uses separate licenses for code and data:
+
+- Source code and documentation are licensed under the MIT License. See `LICENSE.md`.
+- CSV data files in `data/` are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). See `DATA_LICENSE.md`.
+
+The assembled datasets were compiled from previously published and publicly accessible literature sources cited in the article. Users should also cite the original data sources where appropriate.
 
 ## Citation
 
